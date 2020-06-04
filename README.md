@@ -13,7 +13,9 @@ Tags / versions:
 ## Examples run
 
 ```
-docker run --name golangcode --rm -p 8080:8080 --privileged=true hobord/code-server:golang
+docker run --rm --name codego -d -p 8086:8080 -v /p1:/home/coder/project/src/ --privileged=true  hobord/code-server:golang
+
+docker run --name golangcode --rm -p 8080:8080 --privileged=true hobord/code-server:golang  --auth none
 ```
 
 or map some local project directory:
